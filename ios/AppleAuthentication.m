@@ -103,9 +103,6 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
                          @"lastName": familyName,
                          @"email": RCTNullIfNil(credential.email),
                          @"user": credential.user,
-                         // @"authorizedScopes": credential.authorizedScopes,
-                         // @"realUserStatus": @(credential.realUserStatus),
-                         // @"state": RCTNullIfNil(credential.state),
                          };
   _promiseResolve(user);
 }
