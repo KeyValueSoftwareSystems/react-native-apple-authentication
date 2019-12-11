@@ -59,7 +59,7 @@ RCT_EXPORT_METHOD(requestAsync:(NSDictionary *)options
   
   ASAuthorizationAppleIDProvider* appleIDProvider = [[ASAuthorizationAppleIDProvider alloc] init];
   ASAuthorizationAppleIDRequest* request = [appleIDProvider createRequest];
-  request.requestedScopes = @[ASAuthorizationScopeFullName, ASAuthorizationScopeEmail];
+  request.requestedScopes = options[@"requestedScopes"];
   if (options[@"requestedOperation"]) {
     request.requestedOperation = options[@"requestedOperation"];
   }
